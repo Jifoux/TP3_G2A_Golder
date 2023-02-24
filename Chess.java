@@ -29,12 +29,19 @@ public class Chess {
     private void createPlayers(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("quel est le nom du player 1 ?");
-        Player player1 = scanner.nextLine();
+        Player player1 = new Player(scanner.nextLine(),0);
         System.out.println("quel est le nom du player 2 ?");
-        Player player2 = scanner.nextLine();
+        Player player2 = new Player(scanner.nextLine(),1);
+        this.currentPlayer=player1;
     }
     private void initialiseBoard(){
-
+        int i=1;
+        int j=1;
+        for(i=1; i<=8; i++){
+            for(j=1; j<=8; j++){
+                board[i][j] = new (position);
+            }
+        }
     }
     private void printBoard(){
 
