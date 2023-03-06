@@ -4,7 +4,7 @@ public class Chess {
     private Cell[][] board;
     private Player[] players;
     private Player currentPlayer;
-    // On decrit brievement la logique du jeu
+
     public void play() {
         while (true) {
             createPlayers();
@@ -35,10 +35,8 @@ public class Chess {
         this.currentPlayer=player1;
     }
     private void initialiseBoard(){
-        int i=1;
-        int j=1;
-        for(i=1; i<=8; i++){
-            for(j=1; j<=8; j++){
+        for(int i=0; i<=8; i++){
+            for(int j=0; j<=8; j++){
                 board[i][j] = new (position);
             }
         }
